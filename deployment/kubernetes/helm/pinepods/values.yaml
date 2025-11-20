@@ -130,6 +130,8 @@ externalDatabase:
     enabled: false
     name: existing-secret
     key: password
+  # -- manually provide the DB environment variables under extraEnv. Useful for DB solutions like CNPG
+  manuallyProvide: false
 
 resources: {}
 
@@ -178,14 +180,15 @@ env:
   # Set to true for additional logging
   DEBUG_MODE: "false"
 
-
-# 
-## Allows you to provide additional environment variables from existing secrets or configmaps
-envFrom: []
-  # - secretRef:
-  #     name: custom-secret
-  # - configMapRef:
-  #     name: custom-config-map
+## Allows you to specify additional environment values directly on the application pod. Useful for specific configmap or secret references.
+extraEnv: []
+# - name: CUSTOM_VARIABLE
+#   value: "true"
+# - name: DB_HOST
+#   valueFrom:
+#     secretRef:
+#       name: pinepods-db-app
+#       key: host
 
 ## Pod Security Context
 securityContext: {}
