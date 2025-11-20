@@ -24,13 +24,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           token: ${{ secrets.PUSH_PAT }}
           persist-credentials: true
 
       - name: Setup Helm
-        uses: Azure/setup-helm@v4.2.0
+        uses: Azure/setup-helm@fe7b79cd5ee1e45176fcad797de68ecaf3ca4814 # v4.2.0
 
       - name: Install yq
         run: |
@@ -62,7 +62,7 @@ jobs:
 
       - name: Update Helm repo index
         run: |
-          helm repo index docs --url https://helm.pinepods.online
+          helm repo index docs --url https://holysoles.github.io/PinePods
 
       - name: Fetch all branches
         run: git fetch --all
@@ -73,7 +73,7 @@ jobs:
       - name: Checkout main branch
         run: git checkout main
 
-      - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
         with:
           github_token: ${{ secrets.PUSH_PAT }}
           committer_name: GitHub Actions
