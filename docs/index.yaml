@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   pinepods:
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.132884772Z"
+    created: "2025-11-20T02:38:54.18971655Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -18,10 +18,29 @@ entries:
     digest: dd25bb9bde17df0b5d3fbb8a56aa23fe358734577870f8801d55123ef6a80570
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.8.2.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.8.2.tgz
     version: 0.8.2
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.123523925Z"
+    created: "2025-11-20T02:38:54.199358136Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.14
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.1
+    description: A Helm chart for deploying Pinepods - A complete podcast management
+      system and allows you to play, download, and keep track of podcasts you enjoy.
+      All self hosted and enjoyed on your own server!
+    digest: fe470f161b2b367086466a39877f47f0e2d217a784d451700d987879ef0f7fcd
+    name: pinepods
+    urls:
+    - https://holysoles.github.io/PinePods/pinepods-v0.8.2-build002.tgz
+    version: v0.8.2-build002
+  - apiVersion: v2
+    created: "2025-11-20T02:38:54.18049765Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -37,10 +56,10 @@ entries:
     digest: 28e32586ecbdfc1749890007055c61add7b78076cee90980d425113b38b13b9c
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.8.1.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.8.1.tgz
     version: 0.8.1
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.114082893Z"
+    created: "2025-11-20T02:38:54.170984222Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -56,10 +75,10 @@ entries:
     digest: e08c788d3d225ca3caef37c030f27d7c25cd4ecc557f7fe2f32215ff7f164ba8
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.8.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.8.tgz
     version: 0.7.8
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.104601718Z"
+    created: "2025-11-20T02:38:54.16162805Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -75,10 +94,10 @@ entries:
     digest: 2956c727f65099059680638f2529f472affe25cbd9d6ad90b593dbf7444d6648
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.7.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.7.tgz
     version: 0.7.7
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.095243553Z"
+    created: "2025-11-20T02:38:54.151970707Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -94,10 +113,10 @@ entries:
     digest: 7b954cac8ed6cdff756090d56fc3c98342f6ca944922f2c910b7e20fb338ce5a
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.6.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.6.tgz
     version: 0.7.6
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.08593408Z"
+    created: "2025-11-20T02:38:54.141912553Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -113,10 +132,10 @@ entries:
     digest: a69290e9e9051ac4442f19bea78cca08bdd91a831e6c91af06d48eb6b9a07409
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.5.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.5.tgz
     version: 0.7.5
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.076444979Z"
+    created: "2025-11-20T02:38:54.131756576Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -132,10 +151,10 @@ entries:
     digest: 2f5f97abadf581a025315cb288c139274b4411c86f1e46e52944f89e76c23a9c
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.4.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.4.tgz
     version: 0.7.4
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.067177875Z"
+    created: "2025-11-20T02:38:54.122456194Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -151,10 +170,10 @@ entries:
     digest: 47208597c5b52c4d8c9fb659416fe7d679f6fc5a099d9b37caaae0ecfeb33dde
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.3.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.3.tgz
     version: 0.7.3
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.057181838Z"
+    created: "2025-11-20T02:38:54.113184818Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -170,10 +189,10 @@ entries:
     digest: ef86847694c2291c9ebcd4ec40d4f4680c5b675aafc7c82693c3119f5ae4b43b
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.2.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.2.tgz
     version: 0.7.2
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.04708939Z"
+    created: "2025-11-20T02:38:54.10366123Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -189,10 +208,10 @@ entries:
     digest: 07ba1a2859213a3542e03aa922d0dfd0f61d146cd3938e85216a740c1ee90bd4
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.1.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.1.tgz
     version: 0.7.1
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.037629207Z"
+    created: "2025-11-20T02:38:54.093881995Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -208,10 +227,10 @@ entries:
     digest: 1815802cc08ed83c3eaedd2ac28d6fbd044a817e22c7e8cda4af38bffcde9d82
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.7.0.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.7.0.tgz
     version: 0.7.0
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.028436822Z"
+    created: "2025-11-20T02:38:54.084395414Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -222,10 +241,10 @@ entries:
     digest: c994e0c57c47448718cc849d103ab91f21a427b7580a0ef0b4c4decc613a04ad
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.6.6.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.6.6.tgz
     version: 0.6.6
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.023937037Z"
+    created: "2025-11-20T02:38:54.07934755Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -236,10 +255,10 @@ entries:
     digest: 82f6f1d9569626aab1920bc574b3616c77aadbf4c9b6bc1d5cc5f51cc3bc41f2
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.6.5.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.6.5.tgz
     version: 0.6.5
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.020029522Z"
+    created: "2025-11-20T02:38:54.07441332Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -250,10 +269,10 @@ entries:
     digest: c2ab21d0cb61a2e809432f762aca608723365d87e8840d02b29c08bc105c9a31
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.6.4.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.6.4.tgz
     version: 0.6.4
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.015236734Z"
+    created: "2025-11-20T02:38:54.070320872Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -264,10 +283,10 @@ entries:
     digest: 3a0a1b86a6fb22888fead9fc12b84e8845a55ff6736775445028d181318860bf
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.6.3.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.6.3.tgz
     version: 0.6.3
   - apiVersion: v2
-    created: "2025-11-04T13:32:05.010471203Z"
+    created: "2025-11-20T02:38:54.065524071Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -278,6 +297,6 @@ entries:
     digest: f7148434be4b395aaab8bb76fbe1584f7de8fb981b2471506b33ff11be85f706
     name: pinepods
     urls:
-    - https://helm.pinepods.online/pinepods-0.6.2.tgz
+    - https://holysoles.github.io/PinePods/pinepods-0.6.2.tgz
     version: 0.6.2
-generated: "2025-11-04T13:32:05.006291589Z"
+generated: "2025-11-20T02:38:54.060060982Z"
