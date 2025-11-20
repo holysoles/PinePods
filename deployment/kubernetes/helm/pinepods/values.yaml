@@ -130,6 +130,11 @@ externalDatabase:
     enabled: false
     name: existing-secret
     key: password
+  cloudNativePostgres:
+    # ignores the above settings, and pulls all values from a Cloud Native Postgres secret.
+    # see https://cloudnative-pg.io/documentation/1.27/applications
+    enabled: false
+    secretName: "pinepods-db-app"
 
 resources: {}
 

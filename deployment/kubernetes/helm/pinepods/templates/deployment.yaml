@@ -32,12 +32,41 @@ spec:
               {{- toYaml . | nindent 12}}
             {{ end }}
           env:
-            {{ if (and (not .Values.postgresql.enabled) (.Values.externalDatabase.existingSecret.enabled)) -}}
+            {{ if (and (not .Values.postgresql.enabled) (.Values.externalDatabase.existingSecret.enabled)) (not .Values.externalDatabase.cloudNativePostgres.enabled) -}}
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.externalDatabase.existingSecret.name }}
                   key: {{ .Values.externalDatabase.existingSecret.key }}
+            {{- end }}
+            {{- if .Values.externalDatabase.cloudNativePostgres.enabled }}
+            - name: DB_TYPE
+              value: postgresql
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.externalDatabase.cloudNativePostgres.secretName }}
+                  key: host
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.externalDatabase.cloudNativePostgres.secretName }}
+                  key: port
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.externalDatabase.cloudNativePostgres.secretName }}
+                  key: dbname
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.externalDatabase.cloudNativePostgres.secretName }}
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.externalDatabase.cloudNativePostgres.secretName }}
+                  key: password
             {{- end }}
           volumeMounts:
             {{- if .Values.persistence.enabled }}
