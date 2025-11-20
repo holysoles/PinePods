@@ -178,6 +178,15 @@ env:
   # Set to true for additional logging
   DEBUG_MODE: "false"
 
+
+# 
+## Allows you to provide additional environment variables from existing secrets or configmaps
+envFrom: []
+  # - secretRef:
+  #     name: custom-secret
+  # - configMapRef:
+  #     name: custom-config-map
+
 ## Pod Security Context
 securityContext: {}
   # fsGroup: 2000
